@@ -18,6 +18,14 @@ app.use(cookieParser());
 //Routes
 app.use('/api', allRoutes);
 
+//Error handler
+app.use((err, req, res, next) => {
+  const status = err.statusCode || 500
+  const message = err.message || 'Internal server error';
+
+  return res.status(status).json({ message, stack: err.stack });
+})
+
 //Connection
 const connectDB = async () => {
   try {
