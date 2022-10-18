@@ -1,5 +1,5 @@
 import express from 'express';
-import customerRoutes from './customer.js'
+import customerRoutes from './customers.js'
 import authRoutes from './auth.js'
 import usersRoutes from './users.js'
 import checkAuth from '../utils/checkAuth.js';
