@@ -13,7 +13,7 @@ export const updateUser = async (req, res, next) => {
     try {
         const updatedUser = await User.findByIdAndUpdate(req.user.id, {
             name: req.body.name,
-            email: req.body.email
+            email: req.body.email,
         },{
             new: true
         }).select('name email');

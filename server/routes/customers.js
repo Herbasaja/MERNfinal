@@ -1,9 +1,12 @@
 import express from 'express';
+import { createCustomer, getAllCustomers, getCurrentUserCustomers, updateCustomer, deleteCustomer } from '../controllers/customer.js';
 
 const router = express.Router();
 
-router.get('/hello', (req, res) => {
-    res.json('hello')
-})
+router.post('/', createCustomer);
+router.get('/all', getAllCustomers);
+router.get('/myCustomers', getCurrentUserCustomers);
+router.patch('/:customerId', updateCustomer);
+router.delete('/:customerId', deleteCustomer);
 
 export default router;
