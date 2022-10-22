@@ -1,0 +1,13 @@
+.header {
+	display: flex;
+	justify-content: center;
+	img {
+		padding: 1rem;
+		height: 10rem;
+	}
+	.pagetitle {
+		padding: 1rem;
+		color: rgb(0, 2, 114);
+		font-size: 8rem;
+	}
+}
