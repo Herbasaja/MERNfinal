@@ -107,9 +107,9 @@ function CustomerList() {
         )}
         {isUpdating && (
             <form className={classes.addNewForm} onSubmit={updateCustomer} id='addNewForm'>
-                <input type="text" value={customerToUpdate.name} onChange={(e) => setCustomerToUpdate({ ...customerToUpdate, name: e.target.value})}/>
-                <input type="email" value={customerToUpdate.email} onChange={(e) => setCustomerToUpdate({ ...customerToUpdate, email: e.target.value})}/>
-                <input type="text" value={customerToUpdate.age} onChange={(e) => setCustomerToUpdate({ ...customerToUpdate, age: e.target.value})}/>
+                <input type="text" value={customerToUpdate.name} onChange={(e) => setCustomerToUpdate({ ...customerToUpdate, name: e.target.value})} required/>
+                <input type="email" value={customerToUpdate.email} onChange={(e) => setCustomerToUpdate({ ...customerToUpdate, email: e.target.value})} required/>
+                <input type="text" value={customerToUpdate.age} onChange={(e) => setCustomerToUpdate({ ...customerToUpdate, age: e.target.value})} required/>
                 <button type='submit'>Update</button>
                 <button type='button' onClick={closeUpdate}>Close</button>
             </form>
