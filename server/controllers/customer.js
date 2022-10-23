@@ -1,5 +1,4 @@
 import Customer from '../models/customer.js'
-import user from '../models/user.js';
 import createError from '../utils/createError.js';
 
 export const createCustomer = async (req, res, next) => {

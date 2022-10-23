@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './CustomerItem.module.scss';
 
 
-function CustomerItem({ customer, deleteCustomer}) {
+function CustomerItem({ customer, deleteCustomer, updateCustomerClick}) {
   return (
     <tr className={classes.customer_item}>
         <td className={classes.customer_name}>
@@ -15,7 +15,7 @@ function CustomerItem({ customer, deleteCustomer}) {
           <p>{customer.age}</p>
         </td>
         <td className={classes.actionBar}>
-            <button className={classes.editBtn} type='button'>Edit</button>
+            <button className={classes.editBtn} type='button' onClick={() => updateCustomerClick(customer._id)}>Edit</button>
             <button className={classes.deleteBtn} type='button' onClick={() => deleteCustomer(customer._id)}>Delete</button>
         </td>
     </tr>
